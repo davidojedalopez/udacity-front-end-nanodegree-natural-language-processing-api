@@ -21,3 +21,7 @@ Follow these steps:
    - Open src/server/index.js and make sure the root GET endpoint its configured to server your **dist** index.html file
    - Run `npm run build-prod`
    - Run `npm start` and open your localhost at port 8081
+
+## Tests
+
+To run the test suite execute the command `npm test`. Tests are written with Jest.
