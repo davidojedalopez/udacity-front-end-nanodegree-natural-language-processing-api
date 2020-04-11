@@ -2,7 +2,7 @@
 
 This project uses [Aylien's NLP API](https://aylien.com/) to analyze news articles.
 
-
+![Example of app](example.png)
 
 ## How to run it
 
