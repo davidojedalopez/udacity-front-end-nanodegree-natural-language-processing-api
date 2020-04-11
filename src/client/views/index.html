@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+        <link rel="stylesheet"type="css"href="/styles/resets.css">
+        <link rel="stylesheet"type="css"href="/styles/base.css">
+        <link rel="stylesheet"type="css"href="/styles/header.css">
+        <link rel="stylesheet"type="css"href="/styles/form.css">
+        <link rel="stylesheet"type="css"href="/styles/footer.css">
+    </head>
+
+    <body>
+        <main>
+            <h1>
+                Article text analyzer 📄
+            </h1>  
+
+            <form class="" onsubmit="return Client.handleSubmit(event)">
+                <label for="url">
+                    Paste a news article URL and I'll analyze it for you!
+                </label>
+                <input id="url"
+                        type="url"
+                        name="url"
+                        value="https://techcrunch.com/2020/04/10/coronavirus-5g-covid-19-conspiracy-theory-misinformation/"
+                        placeholder="Name">
+                <button type="submit">Submit</button>
+
+                <div class="sk-cube-grid">
+                    <div class="sk-cube sk-cube1"></div>
+                    <div class="sk-cube sk-cube2"></div>
+                    <div class="sk-cube sk-cube3"></div>
+                    <div class="sk-cube sk-cube4"></div>
+                    <div class="sk-cube sk-cube5"></div>
+                    <div class="sk-cube sk-cube6"></div>
+                    <div class="sk-cube sk-cube7"></div>
+                    <div class="sk-cube sk-cube8"></div>
+                    <div class="sk-cube sk-cube9"></div>
+                  </div>
+
+            </form>
+
+            <section>
+                <details open class="article-details">
+                    <summary><h2>Article details</h2></summary>                    
+                    <div id="article-result"></div>                                        
+                </details>
+                
+                <details open class="sentiment-details">
+                    <summary><h2>Sentiment analysis</h2></summary>
+                    <div id="sentiment-result"></div>
+                </details>                                
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Done by David Ojeda using <a href="https://aylien.com/">Aylien APIs.</p>
+            <p> <a href="https://twitter.com/DavidOjedaL">Follow me on Twitter</a> 👋🏼</p>
+        </footer>
+
+
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('./service-worker.js');
+                });
+            }
+        </script>
+    </body>
+
+</html>

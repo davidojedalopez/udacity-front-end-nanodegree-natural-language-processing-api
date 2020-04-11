@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.3em;  
+}
+
+h1 {
+  font-size: 2em;
+  padding-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.4em;  
+  display: inline-block;
+}
+
+main {
+  flex: 2;
+  width: 85vw;  
+  margin: 50px auto;
+}
+
+a {
+  color: inherit;
+}
+
+section {    
+  > details {
+    padding-bottom: 2.5rem;
+  }
+
+  details div {
+    padding-top: 1rem;
+  }
+}
+
+ul {
+  padding-left: 2rem;
+  list-style-type: unset;
+  
+  li {
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+  }
+}
