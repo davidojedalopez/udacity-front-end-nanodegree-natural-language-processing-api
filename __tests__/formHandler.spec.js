@@ -8,9 +8,9 @@ describe('Form submit handler', () => {
   test("Should work without errors", () => {
     let input = { preventDefault: () => {}}
     document.body.innerHTML = `<input id="url" value="https://davidojeda.dev">`
-
     document.body.innerHTML += `<div id="sentiment-result"></div>`
     document.body.innerHTML += `<div id="article-result"></div>`
+    document.body.innerHTML += `<div class="sk-cube-grid"></div>`
 
     global.Client = {}
     global.Client.formatResponse = () => { 
@@ -24,6 +24,7 @@ describe('Form submit handler', () => {
   test("Should fail due to wrong API response", () => {
     let input = { preventDefault: () => {}}
     document.body.innerHTML = `<input id="url" value="https://davidojeda.dev">`
+    document.body.innerHTML += `<div class="sk-cube-grid"></div>`
 
     fetch.mockResponse('Text instead of json')
 
